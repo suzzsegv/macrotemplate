@@ -2,9 +2,9 @@
   "manifest_version": 2,
   "name": "Macro Template",
   "description": "To Apply Macros To Templates",
-  "version": "2.1.1.1",
-  "author": "Nattoheaven",
-  "homepage_url": "https://github.com/nattoheaven/macrotemplate/",
+  "version": "2.1.1.1_Custom",
+  "author": "Original:Nattoheaven, Customize:Suzzsegv",
+  "homepage_url": "https://github.com/suzzsegv/macrotemplate",
   "legacy": {
     "type": "bootstrap"
   },

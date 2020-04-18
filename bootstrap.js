@@ -34,6 +34,9 @@
                 [ /{{{y}}}/g, function(date) {
                     return date.getFullYear().toString();
                 } ],
+                [ /{{{yy}}}/g, function(date) {
+                    return padZero(date.getFullYear() % 100, 2);
+                } ],
                 [ /{{{yyyy}}}/g, function(date) {
                     return padZero(date.getFullYear(), 4);
                 } ],
@@ -60,6 +63,36 @@
                 [ /{{{dd}}}/g, function(date) {
                     return padZero(date.getDate(), 2);
                 } ],
+                [ /{{{dd1}}}/g, function(date) {
+                    var newDate = new Date;
+                    newDate.setDate(newDate.getDate() + 1);
+                    return padZero(newDate.getDate(), 2);
+                } ],
+                [ /{{{dd2}}}/g, function(date) {
+                    var newDate = new Date;
+                    newDate.setDate(newDate.getDate() + 2);
+                    return padZero(newDate.getDate(), 2);
+                } ],
+                [ /{{{dd3}}}/g, function(date) {
+                    var newDate = new Date;
+                    newDate.setDate(newDate.getDate() + 3);
+                    return padZero(newDate.getDate(), 2);
+                } ],
+                [ /{{{dd4}}}/g, function(date) {
+                    var newDate = new Date;
+                    newDate.setDate(newDate.getDate() + 4);
+                    return padZero(newDate.getDate(), 2);
+                } ],
+                [ /{{{dd5}}}/g, function(date) {
+                    var newDate = new Date;
+                    newDate.setDate(newDate.getDate() + 5);
+                    return padZero(newDate.getDate(), 2);
+                } ],
+                [ /{{{dd6}}}/g, function(date) {
+                    var newDate = new Date;
+                    newDate.setDate(newDate.getDate() + 6);
+                    return padZero(newDate.getDate(), 2);
+                } ],
                 [ /{{{E}}}/g, function(date) {
                     return ["Sunday", "Monday", "Tuesday", "Wednesday",
                             "Thursday", "Friday", "Saturday"][date.getDay()];
@@ -67,6 +100,40 @@
                 [ /{{{EEE}}}/g, function(date) {
                     return ["Sun", "Mon", "Tue", "Wed",
                             "Thu", "Fri", "Sat"][date.getDay()];
+                } ],
+                [ /{{{EJ}}}/g, function(date) {
+                    return ["\u65E5", "\u6708", "\u706B", "\u6C34",
+                            "\u6728", "\u91D1", "\u571F"][date.getDay()];
+                } ],
+                [ /{{{EJ1}}}/g, function(date) {
+                    var day = (date.getDay() + 1) % 7
+                    return ["\u65E5", "\u6708", "\u706B", "\u6C34",
+                            "\u6728", "\u91D1", "\u571F"][day];
+                } ],
+                [ /{{{EJ2}}}/g, function(date) {
+                    var day = (date.getDay() + 2) % 7
+                    return ["\u65E5", "\u6708", "\u706B", "\u6C34",
+                            "\u6728", "\u91D1", "\u571F"][day];
+                } ],
+                [ /{{{EJ3}}}/g, function(date) {
+                    var day = (date.getDay() + 3) % 7
+                    return ["\u65E5", "\u6708", "\u706B", "\u6C34",
+                            "\u6728", "\u91D1", "\u571F"][day];
+                } ],
+                [ /{{{EJ4}}}/g, function(date) {
+                    var day = (date.getDay() + 4) % 7
+                    return ["\u65E5", "\u6708", "\u706B", "\u6C34",
+                            "\u6728", "\u91D1", "\u571F"][day];
+                } ],
+                [ /{{{EJ5}}}/g, function(date) {
+                    var day = (date.getDay() + 5) % 7
+                    return ["\u65E5", "\u6708", "\u706B", "\u6C34",
+                            "\u6728", "\u91D1", "\u571F"][day];
+                } ],
+                [ /{{{EJ6}}}/g, function(date) {
+                    var day = (date.getDay() + 6) % 7
+                    return ["\u65E5", "\u6708", "\u706B", "\u6C34",
+                            "\u6728", "\u91D1", "\u571F"][day];
                 } ],
                 [ /{{{H}}}/g, function(date) {
                     return date.getHours().toString();
